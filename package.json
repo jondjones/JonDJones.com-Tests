@@ -1,0 +1,25 @@
+{
+    "name": "ton-integration-tests",
+    "version": "1.0.1",
+    "description": "ton-integration-tests",
+    "main": "index.js",
+    "scripts": {
+        "test": "yarn cypress:open --env configFile=prod",
+        "cypress:open": "npx cypress open",
+        "cypress:run": "cypress run",
+        "cypress:run:prod": "yarn cypress:open --env configFile=prod"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "cypress-cucumber-preprocessor": {
+        "commonPath": "common",
+        "step_definitions": "cypress/step_definitions"
+    },
+    "devDependencies": {
+        "cypress": "^3.1.5"
+    },
+    "dependencies": {
+        "cypress-cucumber-preprocessor": "^1.13.0"
+    }
+}
